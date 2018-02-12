@@ -1,6 +1,7 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
 def index(request):
-    return HttpResponse('Hello from the account app!')
+    message = 'Hello from the account app!'
+
+    return render(request, 'account/base.html', {'message': message, })
