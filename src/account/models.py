@@ -4,7 +4,7 @@ from django.db import models
 
 class Profile(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    nim = models.CharField(max_length=10, default='')
+    nim = models.CharField(max_length=10, default='', unique=True)
     nama_lengkap = models.CharField(max_length=50, default='')
     kelas = models.CharField(max_length=20, default='')
     gambar_profile = models.ImageField(upload_to='users', blank=True)

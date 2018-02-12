@@ -2,7 +2,16 @@
 
 
 {% block content %}
-    <h1>Welcome to your dashboard</h1>
+    <h1>SMK Computer-Based Test (CBT)</h1>
+
+    
+    {% for ul in ulangan %}
+        <ol>
+            <li>{{ ul.mata_pelajaran }} by <em>{{ ul.guru }}</em> | {{ ul.kelas }}</li>
+        </ol>
+    {% endfor %}
+        
+
     <p>Click <a href="{% url 'logout' %}">here</a> to logout</p>
 {% endblock content %}
     
