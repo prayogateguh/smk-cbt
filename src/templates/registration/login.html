@@ -4,18 +4,24 @@
 {% block title %}Login{% endblock title %}
 
 {% block content %}
-<h1>Login</h1>
-
-{% if form.errors %}
-    <p>Your username or password didn't match. Please try again!</p>
-{% endif %}
     
-<div class="login-form">
-    <form action="{% url 'login' %}" method="post">
-        {{ form.as_p }}
-        {% csrf_token %}
-        <input type="hidden" name="next" value="{{ next }}" />
-        <p><input type="submit" value="Login"></p>
-    </form>
+<div class="login-container">
+    <h1 class="title">Login</h1>
+    {% if form.errors %}
+        <p>Your username or password didn't match. Please try again!</p>
+    {% endif %}
+    <div class="login-form">
+        <form action="{% url 'login' %}" method="post">
+            <div class="container">
+                {% for field in form %}
+                <label><b>{{ field.label_tag }}</b></label>
+                {{ field }}
+                {% endfor %}
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}" />
+                <button type="submit">GO</button>
+            </div>
+        </form>
+    </div>
 </div>
 {% endblock content %}
