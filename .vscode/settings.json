@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\muhammadteguh\\.virtualenvs\\smk-exam\\Scripts\\python.exe"
+    "python.pythonPath": "C:\\Users\\muhammadteguh\\.virtualenvs\\smk-exam\\Scripts\\python.exe",
+    "python.linting.enabled": false
 }

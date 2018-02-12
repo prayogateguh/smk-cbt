@@ -4,7 +4,7 @@ from .models import Profile
 
 
 class ProfileAdmin(admin.ModelAdmin):
-    list_display = ['nim', 'user', 'nama_lengkap', 'kelas', 'gambar_profile']
+    list_display = ['nim', 'siswa', 'nama_lengkap', 'kelas', 'gambar_profile']
 
 
 admin.site.register(Profile, ProfileAdmin)
