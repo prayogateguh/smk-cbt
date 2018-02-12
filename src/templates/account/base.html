@@ -5,16 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Account</title>
+    
+    <title>{% block title %}Account{% endblock title %}</title>
+        
 </head>
 <body>
+    
+    {% block content %}
     <h1>Account</h1>
     
     {% if message %}
         <p>{{ message }}</p>
     {% endif %}
 
-    <img src="{% static 'img/ladybug.jpg' %}" alt="Picture of Ladybug">
+    <img src="{% static 'img/ladybug.jpg' %}" alt="Picture of Ladybug">  
+    {% endblock content %}
+        
+    
         
 </body>
 </html>
